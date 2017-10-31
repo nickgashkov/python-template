@@ -1,0 +1,24 @@
+# Ignore special files.
+*~
+.*
+
+# Ignore python cache files.
+__pycache__
+
+# Ignore local logs and settings.
+src/logs/*
+src/settings/local.py
+
+# Ignore gettext's POT-file.
+messages.pot
+
+# Ignore Sphinx API docs build.
+src/docs/build/*
+
+# Keep this .gitignore and .gitkeep files. .gitkeep used for committing empty
+# directories, when defining repository structure.
+!.gitignore
+!.gitkeep
+
+# Keep .editorconfig for file style guidelines.
+!.editorconfig
