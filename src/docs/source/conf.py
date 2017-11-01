@@ -3,7 +3,6 @@
 # Copyright (c) 2017 Nick Gashkov
 #
 # Distributed under MIT License. See LICENSE file for details.
-import inspect
 import logging
 import os
 import sys
@@ -85,19 +84,3 @@ texinfo_documents = [
         'Miscellaneous'
     ),
 ]
-
-
-# def skip_modules(app, what, name, obj, skip, options):
-#     modules_to_exclude = []
-#     exclude = inspect.ismodule(obj) and obj.__name__ in modules_to_exclude
-#
-#     if inspect.ismodule(obj):
-#         sys.stdout.write(obj.__name__)
-#     else:
-#         sys.stdout.write(str(type(obj)) + '\n')
-#
-#     return skip or exclude
-#
-#
-# def setup(app):
-#     app.connect('autodoc-skip-member', skip_modules)
