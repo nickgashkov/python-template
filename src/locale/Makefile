@@ -2,10 +2,10 @@
 
 LANG = ru
 
-POT_PATH = $(PARDIR)/src/locale/messages.pot
+POT_PATH = $(SRCDIR)/locale/messages.pot
 
-MO_PATH = $(PARDIR)/src/locale/$(LANG)/LC_MESSAGES/messages.mo
-PO_PATH = $(PARDIR)/src/locale/$(LANG)/LC_MESSAGES/messages.po
+MO_PATH = $(SRCDIR)/locale/$(LANG)/LC_MESSAGES/messages.mo
+PO_PATH = $(SRCDIR)/locale/$(LANG)/LC_MESSAGES/messages.po
 
 SOURCES = -iname $(PARDIR)/*.py
 

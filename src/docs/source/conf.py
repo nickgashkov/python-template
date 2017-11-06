@@ -3,6 +3,7 @@
 # Copyright (c) 2017 Nick Gashkov
 #
 # Distributed under MIT License. See LICENSE file for details.
+
 import logging
 import os
 import sys
@@ -56,9 +57,9 @@ latex_elements = dict()
 latex_documents = [
     (
         master_doc,
-        '{project_name}.tex'.format(project_name=project),
-        '{project_name} Documentation'.format(project_name=project),
-        '{project_name}'.format(project_name=project),
+        f'{project}.tex',
+        f'{project} Documentation',
+        f'{project}',
         'manual',
     ),
 ]
@@ -66,8 +67,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        '{project_name}'.format(project_name=project),
-        '{project_name} Documentation'.format(project_name=project),
+        f'{project}',
+        f'{project} Documentation',
         [author],
         1,
     ),
@@ -76,10 +77,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        '{project_name}'.format(project_name=project),
-        '{project_name} Documentation'.format(project_name=project),
+        f'{project}',
+        f'{project} Documentation',
         author,
-        '{project_name}'.format(project_name=project),
+        f'{project}',
         '',
         'Miscellaneous'
     ),
