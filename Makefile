@@ -1,7 +1,10 @@
 .PHONY: flake sort po mo apidocs
 
+DEFAULT_NAME = src
+NAME ?= $(DEFAULT_NAME)
+
 export PARDIR = $(shell pwd)
-export SRCDIR = $(PARDIR)/src
+export SRCDIR = $(PARDIR)/$(NAME)
 
 APIDOC_OUTPUT = $(SRCDIR)/docs/source/_apidocs
 APIDOC_SOURCES = $(SRCDIR)/docs/source/_apidocs
@@ -22,3 +25,7 @@ mo:
 apidocs:
 	sphinx-apidoc -f -o $(APIDOC_OUTPUT) -f $(APIDOC_SOURCES) $(APIDOC_EXCLUDE)
 	$(MAKE) html -C $(SRCDIR)/docs/
+
+rename:
+	git ls-files -z | xargs -0 sed -i "" "s/$(DEFAULT_NAME)/$(NAME)/g";
+	mv $(DEFAULT_NAME)/ $(NAME)/
