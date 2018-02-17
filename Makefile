@@ -26,6 +26,7 @@ apidocs:
 	sphinx-apidoc -f -o $(APIDOC_OUTPUT) -f $(APIDOC_SOURCES) $(APIDOC_EXCLUDE)
 	$(MAKE) html -C $(SRCDIR)/docs/
 
-rename:
+nameit:
+	rm $(SRCDIR)/README.md && touch README.md
 	git ls-files -z | xargs -0 sed -i "" "s/$(DEFAULT_NAME)/$(NAME)/g";
 	mv $(DEFAULT_NAME)/ $(NAME)/
