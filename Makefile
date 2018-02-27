@@ -27,6 +27,6 @@ apidocs:
 	$(MAKE) html -C $(SRCDIR)/docs/
 
 nameit:
-	rm $(SRCDIR)/README.md && touch README.md
+	rm $(PARDIR)/README.md && touch README.md
 	git ls-files -z | xargs -0 sed -i "" "s/$(DEFAULT_NAME)/$(NAME)/g";
 	mv $(DEFAULT_NAME)/ $(NAME)/
