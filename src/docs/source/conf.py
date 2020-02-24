@@ -53,7 +53,7 @@ html_sidebars = {
 }
 htmlhelp_basename = 'helpdoc'
 
-latex_elements = dict()
+latex_elements = {}
 latex_documents = [
     (
         master_doc,
